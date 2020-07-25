@@ -1,0 +1,9 @@
+&uart0 {
+    /delete-property/ rx-pin;
+};
+&uart1 {
+    status = "disabled";
+};
+&uart2 {
+    status = "disabled";
+};
