@@ -1,0 +1,23 @@
+menu "pwr_profiling sample settings"
+
+config APP_ADV_INT_MS
+	int "advertising interval in ms"
+	default 150
+
+config APP_CPU_RUN_INTERVAL_MS
+	int "CPU run interval in ms"
+	default 200
+
+config APP_CPU_RUN_DUTY_CYCLE
+	int "CPU run duty cycle in %"
+	default 10
+
+endmenu
+
+module = pwr_profiling
+module-str = pwr_profiling sample
+source "${ZEPHYR_BASE}/subsys/logging/Kconfig.template.log_config"
+
+menu "Zephyr Kernel"
+source "Kconfig.zephyr"
+endmenu
